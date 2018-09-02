@@ -1,0 +1,69 @@
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?selectableItemBackground"
+    app:cardElevation="4dp"
+
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/theme_primary"
+        >
+
+        <!--suppress AndroidLintContentDescription -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+        <com.example.xyzreader.ui.DynamicHeightNetworkImageView
+            android:id="@+id/thumbnail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/photo_placeholder"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="false"
+            />
+            <View
+                android:background="@drawable/image_overlay_gradient"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"/>
+
+        <TextView
+            android:id="@+id/article_title"
+            style="@style/TextAppearance.AppCompat.Subhead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:paddingTop="16dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="4dp"
+            android:textColor="@color/ltgray"
+            android:ellipsize="end"
+            android:maxLines="4"
+            android:layout_gravity="bottom"/>
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/article_subtitle"
+            style="?android:attr/textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="16dp"
+            android:textColor="@color/ltgray"
+            android:maxLines="2"
+            android:ellipsize="end" />
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
