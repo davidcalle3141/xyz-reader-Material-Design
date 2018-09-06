@@ -2,15 +2,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="16dp"
+    android:layout_marginLeft="4dp"
+    android:layout_marginRight="4dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginBottom="4dp"
     android:clickable="true"
     android:focusable="true"
     android:foreground="?selectableItemBackground"
-    app:cardElevation="4dp"
-
     >
 
     <LinearLayout
+        android:id="@+id/list_item_background"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -20,17 +22,19 @@
         <!--suppress AndroidLintContentDescription -->
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:elevation="4dp">
 
 
 
-        <com.example.xyzreader.ui.DynamicHeightNetworkImageView
+        <ImageView
             android:id="@+id/thumbnail"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:background="@color/photo_placeholder"
+            android:cropToPadding="false"
             android:scaleType="centerCrop"
-            android:adjustViewBounds="false"
+            android:adjustViewBounds="true"
             />
             <View
                 android:background="@drawable/image_overlay_gradient"
@@ -55,12 +59,13 @@
 
         <TextView
             android:id="@+id/article_subtitle"
-            style="?android:attr/textAppearanceSmall"
+            style="@style/TextAppearance.AppCompat.Small"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingLeft="16dp"
             android:paddingRight="16dp"
             android:paddingBottom="16dp"
+            android:paddingTop="16dp"
             android:textColor="@color/ltgray"
             android:maxLines="2"
             android:ellipsize="end" />
