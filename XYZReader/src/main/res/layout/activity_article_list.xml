@@ -26,7 +26,8 @@
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/main.appbar">
+        android:id="@+id/main.appbar"
+        android:elevation="4dp">
 
 
     <android.support.design.widget.CollapsingToolbarLayout
@@ -35,7 +36,6 @@
         android:layout_height="112dp"
         android:background="?colorPrimary"
         android:clipToPadding="false"
-        android:elevation="8dp"
         >
 
         <android.support.v7.widget.Toolbar

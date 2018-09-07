@@ -70,11 +70,11 @@ public class ArticleListActivity extends AppCompatActivity implements
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_article_list);
 
-       // mToolbar = findViewById(R.id.toolbar);
+        mToolbar = findViewById(R.id.toolbar);
 
 
         //final View toolbarContainerView = findViewById(R.id.toolbar_container);
-
+        setSupportActionBar(mToolbar);
         mAppbar = findViewById(R.id.main_appbar);
         mSwipeRefreshLayout = findViewById(R.id.swipe_refresh_layout);
         mSwipeRefreshLayout.setProgressViewOffset(false,120,500);
